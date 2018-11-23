@@ -1,0 +1,36 @@
+@keyframes nav-bar-elements{
+   
+}
+@keyframes nav-bar-grow{
+
+}
+@keyframes menu{
+    0%{
+        visibility: hidden;
+    }
+    10%{
+        visibility: visible;
+        filter:opacity(0%);
+        top:50px;
+    }
+    20%{
+        filter:opacity(0%);
+        top:20px;
+    }
+    100%{
+        filter:opacity(100%);
+        top:20px;
+    }
+}
+@keyframes scale-display{
+    from{
+        visibility: visible;
+        filter:opacity(0%);
+        transform: scale(1);
+    }
+    to{
+        visibility: visible;
+        filter:opacity(100%);
+        transform: scale(1);
+    }
+}

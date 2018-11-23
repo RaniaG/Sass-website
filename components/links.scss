@@ -1,0 +1,12 @@
+.link{
+    text-decoration: none;
+    &-basic{
+        color:$shade-2;
+        &:hover{
+            color:$color-3;
+        }
+    }
+    &-yellow{
+        color:$color-3;
+    }
+}

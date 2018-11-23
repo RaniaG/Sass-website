@@ -1,0 +1,42 @@
+.btn{
+    background-color: transparent; //white
+    text-decoration: none;
+    text-transform: uppercase;
+    color:$color-2;
+    display: inline-block;
+    &-main{
+        background-color: $color-1;
+        letter-spacing: 5px;
+        transition-duration: $trans-dur;
+        font-weight:400;
+        &-small{
+            @include set-padding(0.8,2);
+        }
+        &-large{
+            @include set-padding(2,4);
+        }
+        &-huge{
+            @include set-padding(4,8);            
+        }
+        &:hover{
+            background-color: $color-3;
+        }
+    }
+    &-icon{
+        &-white{
+            color:$color-1;
+            
+        }
+        &-yellow{
+            color: $color-3;
+        }
+    }
+    
+    
+}
+
+
+
+
+
+
