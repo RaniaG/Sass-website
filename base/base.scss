@@ -4,11 +4,17 @@
     font-family: $font , Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size:1vw;
+    word-break: break-all;
 }
 
 body{
     height:5000px;
     
+}
+.content{
+    
+    margin-top:$nav-bar-height;
+    position: absolute;
 }
 
 

@@ -25,7 +25,9 @@
     &-icon{
         &-white{
             color:$color-1;
-            
+            &:hover{
+                color:$color-3;
+            }
         }
         &-yellow{
             color: $color-3;

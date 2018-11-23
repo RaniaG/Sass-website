@@ -1,6 +1,6 @@
 .submenu{
     visibility: hidden;
-    opacity: 0%;
+    filter:opacity(0%);
 
     position: absolute;
 
@@ -9,9 +9,11 @@
 
     top:$nav-bar-height; 
     transition-duration: $trans-dur;
-    
+
+    min-width: $submenu-min-width;
     &:hover{
          visibility: visible;
+         filter:opacity(100%);
          top:$submenu-top;
     }
     & ul{
@@ -38,13 +40,35 @@
         grid-template-columns: repeat(4,max-content);
     }
     &-side{
-        
-        & .fas{
-            float:right;
-        }
+        visibility: hidden;
+        // filter:opacity(0%);
+        position: absolute;
+        top:200%;
+        left: 100%;
+        background-color: $shade-3;
+        box-shadow: 1px 1px 2px $shade-2;
+        transition-duration: $trans-dur;
+        transition-delay: $trans-dur;
+        min-width: $submenu-min-width;
         &:hover{
-            
+            top:100%;
+            visibility: visible;
+            // filter:opacity(100%);
         }
+        &-link{
+            position: relative;
+            & .fas{
+                float:right;
+            }
+            &:hover{
+                & .submenu-side{
+                    visibility: visible;
+                    // filter:opacity(100%);
+                    top:100%;
+                }
+            }
+        }
+        
     }
 
 }

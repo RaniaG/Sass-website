@@ -16,7 +16,7 @@ $logo-left:1.5vw;
     grid-template-rows: $nav-bar-height;
 
     box-shadow: 0 2px 2px $shade-2;
-
+    
     &-dark{
         background-color: $color-2;
         width: 100%;
@@ -61,13 +61,14 @@ $logo-left:1.5vw;
     text-decoration: none;
     text-transform: uppercase;
     color:$color-2;
-    $Height:1.8vw;
+    $Height:26px;
+    $Width:26px;
     height:$Height;
-    width:2vw;
+    width:$Width;
     position: relative;
     &-dash
     {
-        width:2vw;
+        width:$Width;
         border-top:2px solid $color-2;
         position: absolute;
         transform-origin: left;
@@ -77,17 +78,18 @@ $logo-left:1.5vw;
             top:0px;
         }
         &:nth-child(2){
-            top: $Height/2;
+            top: 12px;
             filter:opacity(100%);
 
         }
         &:nth-child(3){
-            top: $Height;
+            top: 24px;
         }
     }
     &:hover{
         .nav-menu-btn-dash{
-            $deg:60deg;
+            $deg:65deg;
+            
             &:first-child{
                 transform: rotateZ($deg);
             }
@@ -125,7 +127,7 @@ $logo-left:1.5vw;
          & .submenu{
             top:$submenu-top;
             visibility: visible;
-             
+             filter:opacity(100%);
          }
     }
 }
