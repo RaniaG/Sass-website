@@ -124,7 +124,6 @@
                 position: relative;
                 left:0%;
                 transition-duration: $trans-dur;
-                
             }
             
             &-cart>.btn{
@@ -132,19 +131,17 @@
             }
             &-wish>.btn{
                 transition-delay: $trans-delay;
-               
             }
             &-compare>.btn{
-                transition-delay: $trans-delay*2;  
-                             
+                transition-delay: $trans-delay*2;          
             }
             &-view>.btn{
                 transition-delay: $trans-delay*3;
-                
             }
             &-cart>.btn, &-wish>.btn,&-compare>.btn, &-view>.btn{
                 &:hover +.talkbubble{
                     visibility: visible;
+                    transition-delay: 0s;
                 }
             }
          }

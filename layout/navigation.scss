@@ -36,9 +36,10 @@ $logo-left:1.5vw;
         visibility: hidden;
         display:grid;
         grid-template-columns: repeat(4,25%);
-        align-items: center;
+        
         justify-items: center;
         grid-template-rows: $nav-bar-height;
+        
 
         height: 100%;
         width:0%;
@@ -143,7 +144,7 @@ $logo-left:1.5vw;
     &-text{
         vertical-align: middle;
         position: relative;
-        top:50%;
+        top:$nav-bar-height/2;
         transform: translateY(-50%);
     }
 }

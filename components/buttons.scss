@@ -23,7 +23,7 @@
         }
     }
     &-icon{
-        &-white{
+        &-white>.fas{
             color:$color-1;
             &:hover{
                 color:$color-3;
