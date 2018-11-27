@@ -56,60 +56,95 @@ $logo-left:1.5vw;
             width:50%;
         }
     }
-}
-.nav-menu-btn{
-    background-color: transparent; //white
-    text-decoration: none;
-    text-transform: uppercase;
-    color:$color-2;
-    $Height:26px;
-    $Width:26px;
-    height:$Height;
-    width:$Width;
-    position: relative;
-    &-dash
-    {
-        width:$Width;
-        border-top:2px solid $color-2;
-        position: absolute;
-        transform-origin: left;
-        transition-duration: 1s;    
-        &:first-child{
-
-            top:0px;
+    &__logo{
+    
+        &-text{
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-2;
+            font-size:$nav-bar-logo-font-size;
         }
-        &:nth-child(2){
-            top: 12px;
-            filter:opacity(100%);
-
+        &-image{
+    
+            position: relative;
+            transform: translateY(-$logo-top);
+            &__tri-1{  
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: $logo-dimension solid $color-2;
+                border-right: $logo-dimension solid transparent;
+                filter: opacity(60%);
+                transform:rotateZ(-22deg);
+              }
+              &__tri-2{
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: $logo-dimension solid $color-2;
+                border-left: $logo-dimension solid transparent;
+                filter: opacity(50%);
+                transform:  translateX(-$logo-left) rotateZ(-67deg);
+              }
         }
-        &:nth-child(3){
-            top: 24px;
-        }
+        
     }
-    &:hover{
-        .nav-menu-btn-dash{
-            $deg:65deg;
-            
+    &__menu-btn{
+        background-color: transparent; //white
+        text-decoration: none;
+        text-transform: uppercase;
+        color:$color-2;
+        $Height:26px;
+        $Width:26px;
+        height:$Height;
+        width:$Width;
+        position: relative;
+        &__dash
+        {
+            width:$Width;
+            border-top:2px solid $color-2;
+            position: absolute;
+            transform-origin: left;
+            transition-duration: 1s;    
             &:first-child{
-                transform: rotateZ($deg);
+    
+                top:0px;
             }
             &:nth-child(2){
-                filter:opacity(0%);
+                top: 12px;
+                filter:opacity(100%);
+    
             }
             &:nth-child(3){
-                transform: rotateZ(-$deg);
+                top: 24px;
             }
         }
-        &+.nav-bar-dark>.nav-bar-elements {
-            width:50%;
-            visibility: visible;
-        }  
-
-    }
-
+        &:hover{
+            .nav-bar__menu-btn__dash{
+                $deg:65deg;
+                
+                &:first-child{
+                    transform: rotateZ($deg);
+                }
+                &:nth-child(2){
+                    filter:opacity(0%);
+                }
+                &:nth-child(3){
+                    transform: rotateZ(-$deg);
+                }
+            }
+            &+.nav-bar-dark>.nav-bar-elements {
+                width:50%;
+                visibility: visible;
+            }  
     
+        }
+    
+        
+    }
 }
+
 .nav-element{
     margin-left:1%;
     margin-right:1%;
@@ -148,39 +183,7 @@ $logo-left:1.5vw;
         transform: translateY(-50%);
     }
 }
-.logo{
-    
-    &-text{
-        font-weight: 900;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $color-2;
-        font-size:$nav-bar-logo-font-size;
-    }
-    &-image{
 
-        position: relative;
-        transform: translateY(-$logo-top);
-    }
-    &-tri-1{  
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-top: $logo-dimension solid $color-2;
-      border-right: $logo-dimension solid transparent;
-      filter: opacity(60%);
-      transform:rotateZ(-22deg);
-    }
-    &-tri-2{
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-bottom: $logo-dimension solid $color-2;
-      border-left: $logo-dimension solid transparent;
-      filter: opacity(50%);
-      transform:  translateX(-$logo-left) rotateZ(-67deg);
-    }
-}
 .fas.fa-arrow-down{
     position: absolute;
     filter:opacity(0%);

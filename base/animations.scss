@@ -1,36 +1,56 @@
-@keyframes nav-bar-elements{
-   
-}
-@keyframes nav-bar-grow{
-
-}
-@keyframes menu{
+@keyframes radial-gradient-center{
     0%{
-        visibility: hidden;
+        background-image: radial-gradient(ellipse at center,$color-3 0%, transparent 0%);
     }
-    10%{
-        visibility: visible;
-        filter:opacity(0%);
-        top:50px;
+    25%{
+        background-image: radial-gradient(ellipse at center,$color-3 23%, transparent 25%);        
     }
-    20%{
-        filter:opacity(0%);
-        top:20px;
+    50%{
+        background-image: radial-gradient(ellipse at center,$color-3 48%, transparent 50%);        
+    }
+    75%{
+        background-image: radial-gradient(ellipse at center,$color-3 73%, transparent 75%);        
     }
     100%{
-        filter:opacity(100%);
-        top:20px;
+        background-image: radial-gradient(ellipse at center,$color-3 98%, transparent 100%);                
     }
 }
-@keyframes scale-display{
-    from{
-        visibility: visible;
-        filter:opacity(0%);
-        transform: scale(1);
+@keyframes radial-gradient-right{
+    0%{
+        background-image: radial-gradient(ellipse at right,$color-3 0%, transparent 0%);
     }
-    to{
-        visibility: visible;
-        filter:opacity(100%);
-        transform: scale(1);
+    25%{
+        background-image: radial-gradient(ellipse at right,$color-3 25%, transparent 25%);        
+    }
+    50%{
+        background-image: radial-gradient(ellipse at right,$color-3 50%, transparent 50%);        
+    }
+    75%{
+        background-image: radial-gradient(ellipse at right,$color-3 75%, transparent 75%);        
+    }
+    100%{
+        background-image: radial-gradient(ellipse at right,$color-3 100%, transparent 100%);                
+    }
+}
+@keyframes radial-gradient-bidi{
+    0%{
+        background-image: radial-gradient(ellipse at right,$color-3 0%, transparent 0%),
+                            radial-gradient(ellipse at left,$color-3 0%, transparent 0%);
+    }
+    25%{
+        background-image: radial-gradient(ellipse at right,$color-3 25%, transparent 25%),
+                            radial-gradient(ellipse at left,$color-3 25%, transparent 25%) ;        
+    }
+    50%{
+        background-image: radial-gradient(ellipse at right,$color-3 50%, transparent 50%),
+                        radial-gradient(ellipse at left,$color-3 50%, transparent 50%);    
+    }
+    75%{
+        background-image: radial-gradient(ellipse at right,$color-3 75%, transparent 75%),
+                        radial-gradient(ellipse at left,$color-3 75%, transparent 75%);        
+    }
+    100%{
+        background-image: radial-gradient(ellipse at right,$color-3 100%, transparent 100%),
+                        radial-gradient(ellipse at left,$color-3 100%, transparent 100%);               
     }
 }

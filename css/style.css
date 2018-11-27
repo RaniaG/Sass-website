@@ -13,29 +13,41 @@ body {
   margin-top: 10vw;
   position: absolute; }
 
-@keyframes nav-bar-elements {}@keyframes nav-bar-grow {}@keyframes menu {
+@keyframes radial-gradient-center {
   0% {
-    visibility: hidden; }
-  10% {
-    visibility: visible;
-    filter: opacity(0%);
-    top: 50px; }
-  20% {
-    filter: opacity(0%);
-    top: 20px; }
+    background-image: radial-gradient(ellipse at center, #db9914 0%, transparent 0%); }
+  25% {
+    background-image: radial-gradient(ellipse at center, #db9914 23%, transparent 25%); }
+  50% {
+    background-image: radial-gradient(ellipse at center, #db9914 48%, transparent 50%); }
+  75% {
+    background-image: radial-gradient(ellipse at center, #db9914 73%, transparent 75%); }
   100% {
-    filter: opacity(100%);
-    top: 20px; } }
+    background-image: radial-gradient(ellipse at center, #db9914 98%, transparent 100%); } }
 
-@keyframes scale-display {
-  from {
-    visibility: visible;
-    filter: opacity(0%);
-    transform: scale(1); }
-  to {
-    visibility: visible;
-    filter: opacity(100%);
-    transform: scale(1); } }
+@keyframes radial-gradient-right {
+  0% {
+    background-image: radial-gradient(ellipse at right, #db9914 0%, transparent 0%); }
+  25% {
+    background-image: radial-gradient(ellipse at right, #db9914 25%, transparent 25%); }
+  50% {
+    background-image: radial-gradient(ellipse at right, #db9914 50%, transparent 50%); }
+  75% {
+    background-image: radial-gradient(ellipse at right, #db9914 75%, transparent 75%); }
+  100% {
+    background-image: radial-gradient(ellipse at right, #db9914 100%, transparent 100%); } }
+
+@keyframes radial-gradient-bidi {
+  0% {
+    background-image: radial-gradient(ellipse at right, #db9914 0%, transparent 0%), radial-gradient(ellipse at left, #db9914 0%, transparent 0%); }
+  25% {
+    background-image: radial-gradient(ellipse at right, #db9914 25%, transparent 25%), radial-gradient(ellipse at left, #db9914 25%, transparent 25%); }
+  50% {
+    background-image: radial-gradient(ellipse at right, #db9914 50%, transparent 50%), radial-gradient(ellipse at left, #db9914 50%, transparent 50%); }
+  75% {
+    background-image: radial-gradient(ellipse at right, #db9914 75%, transparent 75%), radial-gradient(ellipse at left, #db9914 75%, transparent 75%); }
+  100% {
+    background-image: radial-gradient(ellipse at right, #db9914 100%, transparent 100%), radial-gradient(ellipse at left, #db9914 100%, transparent 100%); } }
 
 .btn {
   background-color: transparent;
@@ -71,6 +83,14 @@ body {
       color: #db9914; }
   .btn-icon-yellow {
     color: #db9914; }
+  .btn-gradient {
+    color: red;
+    width: 300px;
+    text-align: center; }
+    .btn-gradient:hover {
+      animation-name: radial-gradient-center;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards; }
 
 .nav-bar {
   z-index: 1000;
@@ -112,37 +132,61 @@ body {
     .nav-bar-elements:hover {
       visibility: visible;
       width: 50%; }
-
-.nav-menu-btn {
-  background-color: transparent;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  height: 26px;
-  width: 26px;
-  position: relative; }
-  .nav-menu-btn-dash {
+  .nav-bar__logo-text {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2vw; }
+  .nav-bar__logo-image {
+    position: relative;
+    transform: translateY(-1vw); }
+    .nav-bar__logo-image__tri-1 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 2vw solid black;
+      border-right: 2vw solid transparent;
+      filter: opacity(60%);
+      transform: rotateZ(-22deg); }
+    .nav-bar__logo-image__tri-2 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-bottom: 2vw solid black;
+      border-left: 2vw solid transparent;
+      filter: opacity(50%);
+      transform: translateX(-1.5vw) rotateZ(-67deg); }
+  .nav-bar__menu-btn {
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    height: 26px;
     width: 26px;
-    border-top: 2px solid black;
-    position: absolute;
-    transform-origin: left;
-    transition-duration: 1s; }
-    .nav-menu-btn-dash:first-child {
-      top: 0px; }
-    .nav-menu-btn-dash:nth-child(2) {
-      top: 12px;
-      filter: opacity(100%); }
-    .nav-menu-btn-dash:nth-child(3) {
-      top: 24px; }
-  .nav-menu-btn:hover .nav-menu-btn-dash:first-child {
-    transform: rotateZ(65deg); }
-  .nav-menu-btn:hover .nav-menu-btn-dash:nth-child(2) {
-    filter: opacity(0%); }
-  .nav-menu-btn:hover .nav-menu-btn-dash:nth-child(3) {
-    transform: rotateZ(-65deg); }
-  .nav-menu-btn:hover + .nav-bar-dark > .nav-bar-elements {
-    width: 50%;
-    visibility: visible; }
+    position: relative; }
+    .nav-bar__menu-btn__dash {
+      width: 26px;
+      border-top: 2px solid black;
+      position: absolute;
+      transform-origin: left;
+      transition-duration: 1s; }
+      .nav-bar__menu-btn__dash:first-child {
+        top: 0px; }
+      .nav-bar__menu-btn__dash:nth-child(2) {
+        top: 12px;
+        filter: opacity(100%); }
+      .nav-bar__menu-btn__dash:nth-child(3) {
+        top: 24px; }
+    .nav-bar__menu-btn:hover .nav-bar__menu-btn__dash:first-child {
+      transform: rotateZ(65deg); }
+    .nav-bar__menu-btn:hover .nav-bar__menu-btn__dash:nth-child(2) {
+      filter: opacity(0%); }
+    .nav-bar__menu-btn:hover .nav-bar__menu-btn__dash:nth-child(3) {
+      transform: rotateZ(-65deg); }
+    .nav-bar__menu-btn:hover + .nav-bar-dark > .nav-bar-elements {
+      width: 50%;
+      visibility: visible; }
 
 .nav-element {
   margin-left: 1%;
@@ -171,35 +215,6 @@ body {
     position: relative;
     top: 5vw;
     transform: translateY(-50%); }
-
-.logo-text {
-  font-weight: 900;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-  font-size: 2vw; }
-
-.logo-image {
-  position: relative;
-  transform: translateY(-1vw); }
-
-.logo-tri-1 {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 2vw solid black;
-  border-right: 2vw solid transparent;
-  filter: opacity(60%);
-  transform: rotateZ(-22deg); }
-
-.logo-tri-2 {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-bottom: 2vw solid black;
-  border-left: 2vw solid transparent;
-  filter: opacity(50%);
-  transform: translateX(-1.5vw) rotateZ(-67deg); }
 
 .fas.fa-arrow-down {
   position: absolute;
@@ -283,7 +298,8 @@ body {
   height: 200px;
   display: inline-block;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  border: 2px solid red; }
   .img-content {
     transition-duration: 0.5s;
     width: 100%;
@@ -293,8 +309,7 @@ body {
     width: 100%;
     height: 100%;
     display: inline-block;
-    text-decoration: none;
-    background-color: green; }
+    text-decoration: none; }
   .img-tint:hover {
     filter: brightness(60%); }
   .img-enlarge:hover .img-content {
@@ -398,6 +413,169 @@ body {
         content: "%"; }
     .img-label-black {
       background-color: black; }
+  .img-monochrome {
+    background-color: red;
+    position: relative;
+    filter: grayscale(100%);
+    transition-duration: 0.5s; }
+    .img-monochrome:hover {
+      filter: grayscale(0%); }
+      .img-monochrome:hover .img-monochrome-text {
+        width: 70%; }
+    .img-monochrome-text {
+      position: absolute;
+      background-color: #777777;
+      filter: opacity(70%);
+      width: 50%;
+      height: 25%;
+      top: 60%;
+      transition-duration: 0.5s;
+      color: white;
+      text-align: center;
+      display: grid;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: start;
+      grid-template-rows: repeat(2, 25%); }
+      .img-monochrome-text:before {
+        content: "";
+        left: 100%;
+        border-bottom: 50px solid #777777;
+        border-right: 25px solid transparent;
+        position: absolute; }
+      .img-monochrome-text-name {
+        font-weight: 400; }
+      .img-monochrome-text-title {
+        font-size: 0.7vw; }
+  .img-flip {
+    position: relative; }
+    .img-flip > a > img {
+      position: absolute; }
+    .img-flip-overlay {
+      transform: scale(0.5);
+      position: absolute;
+      top: 0px;
+      filter: opacity(0%) brightness(50%);
+      transition-duration: 0.5s;
+      transform: rotateY(-360deg) scale(0.4); }
+      .img-flip-overlay:hover {
+        transform: rotateY(0deg) scale(1); }
+    .img-flip:hover .img-flip-overlay {
+      filter: opacity(100%) brightness(50%);
+      transform: rotateY(0deg) scale(1); }
+    .img-flip:hover .img-overlay-buttons > .img-overlay-link > .btn {
+      left: 100%; }
+  .img-cube {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    overflow: hidden;
+    background-color: white;
+    perspective: 200px;
+    perspective-origin: top; }
+    .img-cube:hover .img-cube-front {
+      transform: translateY(-200px) rotateX(90deg);
+      filter: brightness(50%); }
+    .img-cube:hover .img-cube-bottom {
+      transform: translateY(0px) rotateX(0deg); }
+    .img-cube-front {
+      width: inherit;
+      height: inherit;
+      transform-origin: bottom;
+      transition-duration: 0.5s;
+      backface-visibility: hidden;
+      position: absolute;
+      filter: brightness(100%); }
+    .img-cube-bottom {
+      width: inherit;
+      height: inherit;
+      transform-origin: top;
+      transition-duration: 0.5s;
+      backface-visibility: hidden;
+      position: absolute;
+      transform: translateY(200px) rotateX(-90deg); }
+      .img-cube-bottom img {
+        filter: brightness(50%); }
+      .img-cube-bottom:hover .img-overlay-buttons > .img-overlay-link > .btn {
+        left: 100%; }
+  .img-gradient {
+    background-color: red; }
+    .img-gradient-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    .img-gradient-buttons {
+      display: grid;
+      width: 100%;
+      height: 25%;
+      grid-template-columns: repeat(4, 25%);
+      justify-items: center;
+      align-content: center;
+      position: absolute;
+      background-color: #777777;
+      top: 100%;
+      transition-duration: 0.5s; }
+      .img-gradient-buttons .talkbubble {
+        width: 350%;
+        top: -400%;
+        left: -150%; }
+        .img-gradient-buttons .talkbubble:before {
+          left: 50%;
+          transform: translateX(-50%);
+          top: 100%;
+          border-top: 0px;
+          border-right: 0.8vw solid transparent;
+          border-left: 0.8vw solid transparent;
+          border-top: 0.8vw solid white; }
+    .img-gradient:hover .gradient {
+      top: -25%; }
+    .img-gradient:hover .img-gradient-buttons {
+      top: 75%; }
+  .img-coloredbg {
+    background-color: white;
+    transition-duration: 0.5s;
+    display: grid;
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 100%; }
+    .img-coloredbg-image {
+      position: relative; }
+    .img-coloredbg-circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition-duration: 1s;
+      border: 1.5vw solid white;
+      border-radius: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) scale(0.54);
+      filter: opacity(100%); }
+    .img-coloredbg-text {
+      justify-self: center;
+      text-align: center; }
+      .img-coloredbg-text-name {
+        font-weight: 400; }
+      .img-coloredbg-text-title {
+        font-size: 0.7vw; }
+    .img-coloredbg img {
+      position: absolute;
+      border: 0.5vw solid #db9914;
+      border-radius: 100%;
+      transition-duration: 0.5s;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) scale(0.5); }
+    .img-coloredbg:hover {
+      background-color: #db9914; }
+      .img-coloredbg:hover img {
+        border-color: white;
+        transform: translateX(-50%) translateY(-50%) scale(0.49); }
+      .img-coloredbg:hover .img-coloredbg-circle {
+        transform: translateX(-50%) translateY(-50%) scale(0.6);
+        filter: opacity(0%); }
+      .img-coloredbg:hover .img-coloredbg-text {
+        color: white; }
 
 .talkbubble {
   visibility: hidden;
@@ -416,3 +594,11 @@ body {
     top: 0.4vw;
     border-top: 0.8vw solid transparent;
     border-right: 0.8vw solid white; }
+
+.gradient {
+  position: absolute;
+  background-image: linear-gradient(0deg, #777777 0%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  transition-duration: 0.5s; }

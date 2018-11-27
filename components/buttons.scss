@@ -34,7 +34,17 @@
         }
     }
     
-    
+    &-gradient{
+        color:red;
+        width:300px;
+        text-align: center;
+        &:hover{
+            animation-name: radial-gradient-center;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+
+        }
+    }
 }
 
 
