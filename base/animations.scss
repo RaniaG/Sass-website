@@ -54,3 +54,192 @@
                         radial-gradient(ellipse at left,$color-3 100%, transparent 100%);               
     }
 }
+
+
+@keyframes enter_shrink{
+    from{
+        visibility: visible;
+        transform: scale(1.1);
+        filter:opacity(0%) blur(10px);
+    }
+    to{
+        transform: scale(1.1);
+        filter:opacity(100%) blur(0px);
+    }
+}
+@keyframes enter_grow{
+    from{
+        transform: scale(1);
+        visibility: visible;
+        filter:opacity(0%) blur(10px);
+    }
+    to{
+        transform: scale(1);
+        filter:opacity(100%) blur(0px);
+    }
+}
+@keyframes stay_grow{
+    from{
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+        transform: scale(1);
+    }
+    to{
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+        transform: scale(1.1);
+    }
+}
+@keyframes stay_shrink{
+    from{
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+        transform: scale(1.1);
+    }
+    to{
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+        transform: scale(1);
+    }
+}
+@keyframes exit_shrink{
+    from{
+        transform: scale(1);        
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+    }
+    to{
+        transform: scale(1);
+        filter:opacity(0%) blur(10px);
+        visibility: hidden;
+    }
+}
+@keyframes exit_grow{
+    from{
+        transform: scale(1.1);
+        visibility: visible;
+        filter:opacity(100%) blur(0px);
+    }
+    to{
+        transform: scale(1.1);
+        filter:opacity(0%) blur(10px);
+        visibility: hidden;
+    }
+}
+
+@keyframes slider-1{
+    0%{
+        transform: scale(1.5);
+        visibility: visible;
+        filter: opacity(0%);
+    }
+    5%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1);
+    }
+    25%{    
+        transform: scale(1.5);
+        visibility: hidden;
+        filter: opacity(100%);
+    }
+    100%{
+        transform: scale(1.5);
+        visibility: hidden;
+        filter: opacity(0%);
+    }
+}
+@keyframes slider-2{
+    0%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    22%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    23%{
+        visibility: visible;
+        transform: scale(1.5);
+        filter: opacity(0%);
+    }
+    30%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+    45%{    
+        transform: scale(1);
+    }
+    50%{
+        visibility: hidden;
+        transform: scale(1.5);
+        filter: opacity(100%);
+    }
+    100%{
+        transform: scale(1.5);
+        visibility: hidden;
+        filter: opacity(0%);
+    }
+}
+@keyframes slider-3{
+    0%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    47%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    48%{
+        visibility: visible;
+        transform: scale(1.5);
+        filter: opacity(0%);
+    }
+    55%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+    70%{    
+        transform: scale(1);
+    }
+    75%{
+        visibility: hidden;
+        transform: scale(1.5);
+        filter: opacity(100%);
+    }
+    100%{
+        transform: scale(1.5);
+        visibility: hidden;
+        filter: opacity(0%);
+    }
+}
+@keyframes slider-4{
+    0%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    72%{
+        transform: scale(1.5);
+        visibility: hidden;
+    }
+    73%{
+        visibility: visible;
+        transform: scale(1.5);
+        filter: opacity(0%);
+    }
+    80%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+    95%{    
+        transform: scale(1);
+        filter: opacity(100%);
+    }
+    100%{
+        visibility: hidden;
+        filter: opacity(0%);
+        transform: scale(1.5);
+    }
+}

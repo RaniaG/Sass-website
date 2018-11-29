@@ -1,0 +1,34 @@
+.logo{
+    
+    &-text{
+        font-weight: 900;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-2;
+        font-size:$nav-bar-logo-font-size;
+    }
+    &-image{
+
+        position: relative;
+        transform: translateY(-$logo-top);
+        &__tri-1{  
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: $logo-dimension solid $color-2;
+            border-right: $logo-dimension solid transparent;
+            filter: opacity(60%);
+            transform:rotateZ(-22deg);
+          }
+          &__tri-2{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-bottom: $logo-dimension solid $color-2;
+            border-left: $logo-dimension solid transparent;
+            filter: opacity(50%);
+            transform:  translateX(-$logo-left) rotateZ(-67deg);
+          }
+    }
+    
+}

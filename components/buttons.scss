@@ -4,37 +4,40 @@
     text-transform: uppercase;
     color:$color-2;
     display: inline-block;
-    &-main{
+    &--main{
         background-color: $color-1;
         letter-spacing: 5px;
         transition-duration: $trans-dur;
         font-weight:400;
-        &-small{
+        font-size:1.4rem;
+        &--small{
             @include set-padding(0.8,2);
         }
-        &-large{
+        &--large{
             @include set-padding(2,4);
         }
-        &-huge{
+        &--huge{
             @include set-padding(4,8);            
         }
         &:hover{
             background-color: $color-3;
         }
     }
-    &-icon{
-        &-white>.fas{
+    &--icon{
+        
+        &--white>.fas{
             color:$color-1;
             &:hover{
                 color:$color-3;
             }
         }
-        &-yellow{
+        &--yellow{
+            // font-size:3rem;
             color: $color-3;
         }
     }
     
-    &-gradient{
+    &--gradient{
         color:red;
         width:300px;
         text-align: center;

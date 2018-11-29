@@ -9,43 +9,43 @@ $height:200px;
     overflow: hidden;
     position: relative;
     border:2px solid red;
-    &-content{
+    &__content{
         transition-duration: $trans-dur;
         width:100%;
         height:100%;
         display: inline-block;
     }
-    &-link{
+    &__link{
         width:100%;
         height:100%;
         display: inline-block;
         text-decoration: none;
         
     }
-    &-tint{
+    &--tint{
         &:hover{
             filter: brightness(60%);
         }
     }
 
-    &-enlarge{
+    &--enlarge{
         &:hover{
-            & .img-content{
+            & .img__content{
                 transform: scale(1.3);
             }
         } 
     }
-    &-border{
+    &--border{
         &:hover{
-            & .img-draw-border-horizontal{
+            & .img__draw-border-horizontal{
                width:100%;
             }
-            & .img-draw-border-vertical{
+            & .img__draw-border-vertical{
                 height:100%;
              }
         } 
     }
-    &-draw-border-horizontal{
+    &__draw-border-horizontal{
         transition-duration: $trans-dur;
         display: inline-block;
         position: absolute;
@@ -59,7 +59,7 @@ $height:200px;
         z-index:2;
 
     }
-    &-draw-border-vertical{
+    &__draw-border-vertical{
         transition-duration: $trans-dur;
         display: inline-block;
         position: absolute;
@@ -73,23 +73,22 @@ $height:200px;
         z-index:2;
 
     }
-    &-overlay{
+    &--overlay{
         // border:2px solid red;
-        &:hover .img-overlay-secondary{
+        &:hover .img--overlay__secondary{
             visibility: visible;
             filter:brightness(50%) opacity(100%);
             transform: scale(1);
         }
-        &:hover >.img-overlay-buttons>.img-overlay-link>.btn
+        &:hover >.img--overlay__buttons>.img--overlay__btn>.btn
         {
             left:100%;
         }
-        &-main{
+        &__main{
             position: absolute;
-            
-            
+ 
         }
-        &-secondary{
+        &__secondary{
             visibility: hidden;
             filter:opacity(0%);
             position: absolute;
@@ -102,12 +101,12 @@ $height:200px;
                 transform: scale(1);
             }
         }
-        &-labels{
+        &__labels{
             position: absolute;
             top:0px;
             width:100%;
         }
-        &-buttons{
+        &__buttons{
             position: absolute;
             top:0px;   
             left: -20%;
@@ -117,7 +116,7 @@ $height:200px;
             grid-template-rows: repeat(4,25%);
             align-items: center;
         }
-        &-link{
+        &__btn{
             $trans-delay:0.1s;
             position: relative;
             &>.btn{
@@ -126,19 +125,16 @@ $height:200px;
                 transition-duration: $trans-dur;
             }
             
-            &-cart>.btn{
-                
-            }
-            &-wish>.btn{
+            &--wish>.btn{
                 transition-delay: $trans-delay;
             }
-            &-compare>.btn{
+            &--compare>.btn{
                 transition-delay: $trans-delay*2;          
             }
-            &-view>.btn{
+            &--view>.btn{
                 transition-delay: $trans-delay*3;
             }
-            &-cart>.btn, &-wish>.btn,&-compare>.btn, &-view>.btn{
+            &--cart>.btn, &--wish>.btn,&--compare>.btn, &--view>.btn{
                 &:hover +.talkbubble{
                     visibility: visible;
                     transition-delay: 0s;
@@ -146,7 +142,7 @@ $height:200px;
             }
          }
     }
-    &-label{
+    &__label{
         font-size:$image-overlay-label-font;
         $pad:0.5vw;
         $marg:0.5vw;
@@ -159,13 +155,13 @@ $height:200px;
         color:$color-1;
         display: inline-block;
         visibility: visible;
-        &-green{
+        &--green{
             background-color: $color-5;
         }
-        &-yellow{
+        &--yellow{
             background-color: $color-3;
         }
-        &-discount{
+        &--discount{
             background-color: $color-4;
             float:right;
             margin-right:$marg;
@@ -176,23 +172,23 @@ $height:200px;
                 content:"%"; 
             }
         }
-        &-black{
+        &--black{
             background-color: $color-2;
         }
 
     }
-    &-monochrome{
+    &--monochrome{
         background-color: red;
         position: relative;
         filter:grayscale(100%);
         transition-duration: $trans-dur;
         &:hover{
             filter:grayscale(0%);
-            & .img-monochrome-text{
+            & .img--monochrome__text{
                 width:70%;
             }
         }
-        &-text{
+        &__text{
             position: absolute;
             background-color: $shade-2;
             filter:opacity(70%);
@@ -215,20 +211,20 @@ $height:200px;
                 border-right: $width/8 solid transparent;
                 position: absolute;
             }
-            &-name{
+            &__name{
                 font-weight: 400;
             }
-            &-title{
+            &__title{
                 font-size:0.7vw;
             }
         }   
     }
-    &-flip{
+    &--flip{
         position: relative;
         & >a>img{
             position: absolute;
         }
-        &-overlay{
+        &__cover{
             transform: scale(0.5);
             position: absolute;
             top:0px;
@@ -239,15 +235,15 @@ $height:200px;
                 transform: rotateY(0deg) scale(1);
             }
         }
-        &:hover .img-flip-overlay{
+        &:hover .img--flip__cover{
             filter:opacity(100%) brightness(50%);  
             transform: rotateY(0deg) scale(1); 
         }
-        &:hover .img-overlay-buttons>.img-overlay-link>.btn{
+        &:hover .img--overlay__buttons>.img--overlay__btn>.btn{
             left:100%;
         }
     }
-    &-cube{
+    &--cube{
         width:200px;
         height: 200px;
         border: 2px solid black;
@@ -256,16 +252,16 @@ $height:200px;
         perspective: 200px;
         perspective-origin:  top;
         &:hover{
-            & .img-cube-front{
+            & .img--cube__front{
                 transform: translateY(-200px) rotateX(90deg);
                 filter: brightness(50%);
             }
-            & .img-cube-bottom{
+            & .img--cube__bottom{
                 transform: translateY(0px) rotateX(0deg);
             }
     
         }
-        &-front{
+        &__front{
             width:inherit;
             height: inherit;
             transform-origin: bottom;
@@ -274,7 +270,7 @@ $height:200px;
             position: absolute;
             filter: brightness(100%);
         }
-        &-bottom{
+        &__bottom{
             width:inherit;
             height: inherit;
             transform-origin: top;
@@ -285,19 +281,27 @@ $height:200px;
             backface-visibility: hidden;
             position: absolute;
             transform: translateY(200px) rotateX(-90deg);
-            &:hover .img-overlay-buttons>.img-overlay-link>.btn{
+            &:hover .img--overlay__buttons>.img--overlay__btn>.btn{
                 left:100%;
             }
         }
     } 
-    &-gradient{
+    &--gradient{
         background-color: red;
-        &-bg{
+        &__bg{
             position: absolute;
             width:100%;
             height:100%;
         }
-        &-buttons{
+        &__cover{
+            position: absolute;
+            background-image: linear-gradient(0deg,$shade-2 0%,transparent 50%);
+            width:100%;
+            height: 100%;
+            top:0px;
+            transition-duration: $trans-dur;
+        }
+        &__buttons{
             display:grid;
             width:100%;
             height:25%;
@@ -324,68 +328,68 @@ $height:200px;
             }
         }
         &:hover {
-            & .gradient {
+            & .img--gradient__cover {
             top:-25%;
             }
-            & .img-gradient-buttons{
+            & .img--gradient__buttons{
                 top:75%;
             }
         }
     }
-    &-coloredbg{
+    &--color-bg{
+        height: 300px;
         background-color: $color-1;
         transition-duration: $trans-dur;
         display:grid;
-        grid-template-rows: 75% 25%;
+        grid-template-rows: 70% 30%;
         grid-template-columns:100%;
-        
-        &-image{
+
+        justify-items: center;
+        align-items: center;
+        &__image{
+            width:50%;
+            height:50%;
             position: relative;
-        }
-        &-circle{
-            position: absolute;
-            width:100%;
-            height: 100%;
-            transition-duration: 1s;
-            border:1.5vw solid $color-1;
             border-radius: 100%;
-            top:50%;
-            left:50%;
-            transform: translateX(-50%) translateY(-50%) scale(0.54);
-            filter:opacity(100%);
+            & img{
+                border-radius: 100%;
+            }
+            &:before{
+                content:"";
+                border: 10px solid white;
+                border-radius: 100%;
+                position: absolute;
+                width:100%;
+                height:100%;
+                box-sizing: border-box;
+                transform: scale(1.3);
+                filter: opacity(100%);
+                transition-duration: $trans-dur;
+                transition-delay: 0.1s;
+            }
         }
-        &-text{
-            justify-self: center;
-            text-align: center;
-            &-name{
+        
+        &__text{
+            &__name{
                 font-weight: 400;
             }
-            &-title{
+            &__title{
                 font-size:0.7vw;
             }
         }
-        & img{
-            position: absolute;
-            border:0.5vw solid $color-3;
-            border-radius: 100%;
-            transition-duration: $trans-dur;
-            top:50%;
-            left:50%;
-            transform: translateX(-50%) translateY(-50%) scale(0.5) ;
-        }
+        
         &:hover{
             background-color: $color-3;
-            & img{
-                border-color: $color-1;
-                transform:  translateX(-50%) translateY(-50%) scale(0.49) ;
+            & .img--color-bg__image{
+                &:before{
+                    transform:scale(1.4);
+                    filter: opacity(0%);
+                }
             }
-            & .img-coloredbg-circle{
-            transform: translateX(-50%) translateY(-50%) scale(0.6);   
-            filter:opacity(0%);              
-            }
-            & .img-coloredbg-text{
+            & .img--color-bg__text{
                 color:$color-1;
             }
+
         }
     }
 }
@@ -408,12 +412,5 @@ $height:200px;
         border-right: $image-overlay-label-font solid $color-1;
       }
   }
-.gradient{
-    position: absolute;
-    background-image: linear-gradient(0deg,$shade-2 0%,transparent 50%);
-    width:100%;
-    height: 100%;
-    top:0px;
-    transition-duration: $trans-dur;
-}
+
 

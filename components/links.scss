@@ -1,12 +1,15 @@
 .link{
     text-decoration: none;
-    &-basic{
+    &--basic{
         color:$color-2;
         &:hover{
             color:$color-3;
         }
     }
-    &-yellow{
+    &--yellow{
         color:$color-3;
     }
+}
+.test{
+    
 }

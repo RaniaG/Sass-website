@@ -1,0 +1,35 @@
+.talkbubble {
+    &--side{
+        visibility: hidden;
+        padding:$image-overlay-label-font/2;
+        background-color: $color-1;
+        position: absolute;
+        font-size:$image-overlay-label-font*1.2;
+        width:150%;
+        left: 180%;
+        top: -50%;
+        text-align: center;
+        &:before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: $image-overlay-label-font/2;
+            border-top: $image-overlay-label-font solid transparent;
+            border-right: $image-overlay-label-font solid $color-1;
+        }
+    }
+    &--bottom{
+        width:350%;
+        top:-400%;
+        left:-150%;
+        &:before{
+            left: 50%; 
+            transform: translateX(-50%);
+            top:100%;
+            border-top: 0px; 
+            border-right: $image-overlay-label-font solid transparent;
+            border-left: $image-overlay-label-font solid transparent;
+            border-top: $image-overlay-label-font solid $color-1;
+        }
+    }
+  }

@@ -1,20 +1,17 @@
 *{
-    // box-sizing: border-box;
     margin: 0px;
     font-family: $font , Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size:1vw;
-    word-break: break-all;
+    font-size: 1.4rem;
+    // font-size:1vw;
+    // word-break: break-all;
 }
-
+html{
+    font-size: 62.5%; //of 16px = 10px
+}
 body{
     height:5000px;
     
-}
-.content{
-    
-    margin-top:$nav-bar-height;
-    position: absolute;
 }
 
 
