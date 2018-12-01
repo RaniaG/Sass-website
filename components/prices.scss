@@ -1,0 +1,27 @@
+.prices{
+    &--euro{
+        & .prices__price:before{
+            content:"£";
+        }
+    }
+    &--dollar{
+        & .prices__price:before{
+            content:"$";
+        }
+    }
+
+    &__price{
+        display: inline-block;
+        
+        &--old{
+            color:$color-2;
+            text-decoration: line-through;
+        }
+        &--current{
+            color:$color-2;
+        }
+        &--new{
+            color:$color-3;
+        }
+    }
+}

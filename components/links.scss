@@ -1,15 +1,45 @@
 .link{
     text-decoration: none;
-    &--basic{
+    z-index: 10;
+    &--grey{
+        color:$shade-2;
+        border-bottom-color: $shade-2;
+    }
+    &--black{
         color:$color-2;
-        &:hover{
-            color:$color-3;
-        }
+        border-bottom-color: $color-2;
+    }
+    &--white{
+        color:$color-1;
+        border-bottom-color: $color-1;
     }
     &--yellow{
         color:$color-3;
+        border-bottom-color: $color-3;
     }
-}
-.test{
-    
+    &--underline{
+        position: relative;
+        margin-top: 1rem;
+        &:after{
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            content:"";
+            position: absolute;
+            // width:92%;
+            width:5.5rem;
+            top:100%;
+            left:0px;
+            margin-top:0.5rem;
+        }
+    }
+    &--margin{
+        margin-top:4%;
+        margin-bottom:4%;
+    }
+    &:hover{
+        color:$color-3;
+        &:after{
+            border-color: $color-3;
+        }
+    }
 }

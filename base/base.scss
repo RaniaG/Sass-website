@@ -5,13 +5,18 @@
     font-size: 1.4rem;
     // font-size:1vw;
     // word-break: break-all;
+    -webkit-appearance:     none;
+    -moz-appearance:        none;
+    -ms-appearance:         none;
+    -o-appearance:          none;
+    appearance:             none;
 }
 html{
     font-size: 62.5%; //of 16px = 10px
+
 }
-body{
-    height:5000px;
-    
+button{
+    border:none;
 }
 
 

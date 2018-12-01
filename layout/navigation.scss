@@ -30,6 +30,9 @@ $logo-left:1.5vw;
             align-items: center;
             justify-items:center;
             justify-content: end;
+            & .btn>.fas{
+                font-size:$nav-bar-icon-btn-font;
+            }
         }
         &__light{ 
             visibility: hidden;

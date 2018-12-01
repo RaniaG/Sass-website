@@ -9,12 +9,22 @@
 @import 'base/animations';
 @import 'base/utilities';
 @import 'base/typography';
-@import 'components/buttons';
+
 @import 'layout/navigation';
-
-
 @import 'layout/_grid';
+
+@import 'components/prices';
+@import 'components/video';
+@import 'components/section';
+@import 'components/card';
+@import 'components/form';
+@import 'components/talkbubble';
+@import 'components/fixed-bg';
+@import 'components/img-text';
+@import 'components/banners';
+@import 'components/buttons';
 @import 'components/cube';
+@import 'components/catalog';
 @import 'components/logo';
 @import 'components/slider';
 @import 'components/content';
@@ -22,6 +32,7 @@
 @import 'components/submenu';
 @import 'components/images';
 @import 'components/side-menu';
+
 
 
 

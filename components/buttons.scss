@@ -5,26 +5,40 @@
     color:$color-2;
     display: inline-block;
     &--main{
-        background-color: $color-1;
-        letter-spacing: 5px;
+        letter-spacing: 0.5rem;
         transition-duration: $trans-dur;
         font-weight:400;
-        font-size:1.4rem;
         &--small{
-            @include set-padding(0.8,2);
+            font-size:1.4rem;
+            line-height: 4rem;
+            @include set-padding(0,2);
         }
         &--large{
-            @include set-padding(2,4);
+            font-size:1.6rem;
+            line-height: 7rem;
+            @include set-padding(0,4);
         }
         &--huge{
-            @include set-padding(4,8);            
+            font-size:1.8rem;
+            line-height: 10rem;
+            @include set-padding(0,5);            
+        }
+        &--light{
+            background-color: $color-1;
+            color: $color-2;
+        }
+        &--dark{
+            background-color: $color-2;
+            color: $color-1;
         }
         &:hover{
             background-color: $color-3;
         }
     }
     &--icon{
-        
+        & .fas{
+            font-size:$icon-btn-font;
+        }
         &--white>.fas{
             color:$color-1;
             &:hover{

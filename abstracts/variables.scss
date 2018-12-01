@@ -14,16 +14,19 @@ $shade-3:rgb(249, 249, 249); //submenu background
 $font: 'Roboto';
 $nav-bar-font-size:1.2vw;
 $submenu-head-font-size:1.5vw;
+$nav-bar-icon-btn-font:2rem;
 // $nav-bar-logo-font-size:2vw;
 $nav-bar-logo-font-size:3rem;
 
-$image-overlay-label-font:0.8vw;
+$img-label-font:1.3rem;
+$icon-btn-font:2rem;
 $submenu-top:7vw;
 $submenu-min-width:7vw;
-
-$pad:1vw; //padding
+$slider-height: 65rem;
+// $pad:1vw; //padding
+$pad: 1rem;
 $trans-dur:0.5s; //transition duration
 
-$nav-bar-height:10vw;
+$nav-bar-height:6vw;
 
 $side-bar-width:20vw;

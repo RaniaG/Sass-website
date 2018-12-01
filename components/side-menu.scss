@@ -1,16 +1,15 @@
 .side-menu{
     position: absolute;
     width: $side-bar-width;
-    height: 100%;
+    height: inherit;
     left:-15%;
     background-color: $shade-2;
-    margin-top:$nav-bar-height;   
     transition-duration: $trans-dur;
     perspective-origin: right;
     perspective:200px;
     &:hover{
         left:0%;
-        & +.content{
+        & +.slider{
             left: 20.25%;
         }
         & .side-menu__content{
@@ -57,9 +56,9 @@
         }*/
     }
     &__content{
-        background-color: red;
+        background-color: $shade-1;
         height: 100%;
-        width:74%;
+        width:72%;
         transition-duration: $trans-dur;
         transform-origin: right;
         transform: rotateY(-45deg);

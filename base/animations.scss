@@ -56,78 +56,56 @@
 }
 
 
-@keyframes enter_shrink{
-    from{
+@keyframes enter-from-top{
+    0%{
         visibility: visible;
-        transform: scale(1.1);
-        filter:opacity(0%) blur(10px);
+        transform-origin: bottom;
+        transform: translateY(-100%) rotateX(90deg);
+    }   
+    100%{
+        transform-origin: bottom;
+        transform: translateY(0%) rotateX(0deg);
     }
-    to{
-        transform: scale(1.1);
-        filter:opacity(100%) blur(0px);
-    }
+
 }
-@keyframes enter_grow{
-    from{
-        transform: scale(1);
-        visibility: visible;
-        filter:opacity(0%) blur(10px);
-    }
-    to{
-        transform: scale(1);
-        filter:opacity(100%) blur(0px);
-    }
-}
-@keyframes stay_grow{
-    from{
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-        transform: scale(1);
-    }
-    to{
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-        transform: scale(1.1);
-    }
-}
-@keyframes stay_shrink{
-    from{
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-        transform: scale(1.1);
-    }
-    to{
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-        transform: scale(1);
-    }
-}
-@keyframes exit_shrink{
-    from{
-        transform: scale(1);        
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-    }
-    to{
-        transform: scale(1);
-        filter:opacity(0%) blur(10px);
+@keyframes exit-to-bottom{
+    0%{
+        transform-origin: top;
+        transform: translateY(0%) rotateX(0deg);
+    }   
+    100%{
+        transform-origin: top;
+        transform: translateY(100%) rotateX(-90deg);
         visibility: hidden;
     }
 }
-@keyframes exit_grow{
-    from{
-        transform: scale(1.1);
-        visibility: visible;
-        filter:opacity(100%) blur(0px);
-    }
-    to{
-        transform: scale(1.1);
-        filter:opacity(0%) blur(10px);
+@keyframes exit-to-right{
+    0%{
+        // transform: translateZ(50%);
+        transform-origin: left;
+    }   
+    100%{
+        transform-origin: left;
+        transform: translateX(100%) rotateY(90deg);
         visibility: hidden;
+    }
+}
+@keyframes enter-from-left{
+    
+    0%{
+        visibility: visible;
+        transform-origin: right;
+        transform: translateX(-100%) rotateY(-90deg);
+    }
+    100%{
+        transform-origin: right;
+        transform: translateX(0%) rotateY(0deg); 
     }
 }
 
-@keyframes slider-1{
+
+
+@keyframes shrink-grow__slider-1{
     0%{
         transform: scale(1.5);
         visibility: visible;
@@ -151,7 +129,7 @@
         filter: opacity(0%);
     }
 }
-@keyframes slider-2{
+@keyframes shrink-grow__slider-2{
     0%{
         transform: scale(1.5);
         visibility: hidden;
@@ -183,7 +161,7 @@
         filter: opacity(0%);
     }
 }
-@keyframes slider-3{
+@keyframes shrink-grow__slider-3{
     0%{
         transform: scale(1.5);
         visibility: hidden;
@@ -215,7 +193,7 @@
         filter: opacity(0%);
     }
 }
-@keyframes slider-4{
+@keyframes shrink-grow__slider-4{
     0%{
         transform: scale(1.5);
         visibility: hidden;

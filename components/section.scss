@@ -1,0 +1,17 @@
+.section{   
+    
+    border:1px solid green;  
+    overflow: hidden; 
+    &--tiny{
+        height:50rem;
+    }
+    &--small{
+        height:65rem;
+    }
+    &--large{
+        height:80rem;
+    }
+    &--huge{
+        height:100rem;
+    }
+}

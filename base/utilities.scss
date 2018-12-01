@@ -1,15 +1,27 @@
 .u-uppercase{
     text-transform: uppercase;
 }
-.u-underline{
-    text-decoration: underline;
+
+.u-letter-spacing{
+    letter-spacing: 0.5rem;
 }
-.u-yellow{
+.u-text-yellow{
     color: $color-3;
 }
-.u-grey{
+.u-text-grey{
     color:$shade-1;
 }
-.u-white{
+.u-text-white{
     color:$color-1;
+}
+.u-text-black{
+    color:$color-2;
+}
+.u-text-centered{
+    text-align: center;
+}
+.u-margin{
+    &--small{
+    margin: 1%;
+    }
 }
