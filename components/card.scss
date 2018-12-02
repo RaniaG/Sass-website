@@ -87,5 +87,117 @@
             
         } 
     }
+    &--map{
+        width:50%;
+        height:100%;
+        background-position: center;
+        background-size: cover;
+        background-clip: content-box;
+        position: relative;
+        &__item{
+            position: relative;
+            z-index: 1;
+            &-1{
+                left: 40%;
+                top: 35%;
+            }
+            &-2{
+                left: 68%;
+                top: 40%;
+            }
+            &__more-info{
+                width:20rem;
+                height: 20rem;
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.555);
+                border-radius: 100%;
+                left: -7rem;
+                top: 2rem; //->5rem
+                filter:opacity(0%);
+                visibility: hidden;
+                transition-duration: $trans-dur;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items:center;
+                al
+                &:hover{
+                    visibility: visible;
+                    top:5rem;
+                    filter: opacity(100%);
+                }
+                & .img-content{
+                    width:40%;
+                    height:40%;
+                }
+            }
+            &__btn{
+                &-container{
+                    position: relative;
+                    
+                    z-index: 1;
+                
+                &:hover{
+                    .card--map__item__btn{
+                        background-image: radial-gradient(circle at center, $color-1 0%, $color-1 30%,
+                                        $color-2 30%, $color-2 50%, $color-1 50%, $color-1 100% );
+                        &::before ,&::after{
+                            animation-play-state: paused;
+                        }
+                    }
+                    & .card--map__item__more-info{
+                        visibility: visible;
+                        top:5rem;
+                        filter: opacity(100%);
+                    }
+                }
+                }
+                
+                position: absolute;
+                border: 0.1rem solid $color-2;
+                border-radius: 100%;
+                width: 5rem;
+                height: 5rem;
+                
+                background-image: radial-gradient(circle at center, $color-2 0%, $color-2 30%,
+                                    $color-1 30%, $color-1 50%, rgba(0, 0, 0, 0.541) 50%, rgba(0, 0, 0, 0.541) 100% );
+            
+                &::before{
+                    z-index: -1;
+                    content:"";
+                    position: absolute;
+                    border-radius: 100%;
+                    background-color: $color-2;
+                    $w:3rem;
+                    width:$w;
+                    height: $w;
+                    top:1rem;
+                    left:1rem;
+                    filter: opacity(80%);
+                    animation-name:grow-fade-1;
+                    animation-iteration-count: infinite;
+                    animation-duration: 3s;
+                }
+                &:after{
+                    z-index: -2;
+                    content:"";
+                    position: absolute;
+                    border-radius: 100%;
+                    background-color: $color-2;
+                    $w:3rem;
+                    width:$w;
+                    height: $w;
+                    top:1rem;
+                    left:1rem;
+                    filter: opacity(80%);
+                    animation-name:grow-fade-2;
+                    animation-iteration-count: infinite;
+                    animation-duration: 3s;
+                }
+                
+                
+            }
+        }
+    }
 
 }

@@ -1,7 +1,5 @@
 
-$logo-dimension: 2vw;
-$logo-top:$logo-dimension/2;
-$logo-left:1.5vw;
+
 
 .nav-bar{
     z-index:1000;
@@ -70,7 +68,7 @@ $logo-left:1.5vw;
                     
                      & .fas.fa-arrow-down{
                         filter:opacity(100%);
-                        top:30%;
+                        top:20%;
                      }
                      & .submenu{
                         top:$submenu-top;
@@ -156,7 +154,7 @@ $logo-left:1.5vw;
 .fas.fa-arrow-down{
     position: absolute;
     filter:opacity(0%);
-    top:10%;
+    top:0%;
     transition-duration: 1s;
     left:50%;
     transform: translateX(-50%);

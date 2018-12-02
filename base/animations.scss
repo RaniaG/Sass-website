@@ -221,3 +221,36 @@
         transform: scale(1.5);
     }
 }
+@keyframes grow-fade-1{
+    0%{
+        
+        transform: scale(1);
+        filter:opacity(80%);
+    }
+    50%{
+        transform: scale(5);
+        filter:opacity(0%);
+    }
+    100%{
+        filter:opacity(0%);
+        transform: scale(1);
+    }
+}
+@keyframes grow-fade-2{
+    0%{
+        transform: scale(1);
+        filter:opacity(80%);
+    }
+    15%{
+        transform: scale(1);
+        filter:opacity(80%);
+    }
+    50%{
+        filter:opacity(0%);
+        transform: scale(5);
+    }
+    100%{
+        filter:opacity(0%);
+        transform: scale(1);
+    }
+}

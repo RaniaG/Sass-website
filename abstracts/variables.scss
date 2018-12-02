@@ -9,6 +9,11 @@ $shade-1: rgb(153, 153, 153);
 $shade-2:rgb(119, 119, 119); //font link
 $shade-3:rgb(249, 249, 249); //submenu background
 
+$insta-color-1:rgb(100%, 80%, 27%);
+$insta-color-2:rgb(100%, 18%, 58%);
+$insta-color-3:rgb(35%, 32%, 94%);
+$insta-color-4:rgb(100%, 34%, 21%);
+
 
 
 $font: 'Roboto';
@@ -20,7 +25,7 @@ $nav-bar-logo-font-size:3rem;
 
 $img-label-font:1.3rem;
 $icon-btn-font:2rem;
-$submenu-top:7vw;
+$submenu-top:100%;
 $submenu-min-width:7vw;
 $slider-height: 65rem;
 // $pad:1vw; //padding
@@ -30,3 +35,7 @@ $trans-dur:0.5s; //transition duration
 $nav-bar-height:6vw;
 
 $side-bar-width:20vw;
+
+$logo-dimension: 2vw;
+$logo-top:$logo-dimension/2;
+$logo-left:1.5vw;

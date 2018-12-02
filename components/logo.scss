@@ -1,5 +1,11 @@
 .logo{
-    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    background-color: blue;
     &-text{
         font-weight: 900;
         text-decoration: none;

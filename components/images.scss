@@ -214,7 +214,7 @@
         }
     }
     &--cube{
-        border: 2px solid black;
+        
         overflow: hidden;
         background-color: white;
         perspective: 20rem;
@@ -245,10 +245,7 @@
             }
             &__bottom{
                 transform-origin: top;
-                & img{
-                    filter: brightness(50%);
-                }
-                
+                @include insta-bg;
                 transform: translateY(100%) rotateX(-90deg);
                 &:hover .img--overlay__buttons>.img--overlay__btn>.btn{
                     left:100%;
@@ -262,10 +259,9 @@
             }
             &__right{
                 transform-origin: right;
-                & img{
-                    filter: brightness(50%);
-                }
+                
                 transform: translateX(-100%) rotateY(-90deg);
+                @include insta-bg;
             }
             &:hover{
                 & .img--cube--right__front{
@@ -286,10 +282,10 @@
             }
             &__left{
                 transform-origin: left;
-                & img{
-                    filter: brightness(50%);
-                }
                 transform: translateX(100%) rotateY(90deg);
+                
+                    @include insta-bg; 
+                
             }
             &:hover{
                 & .img--cube--left__front{
@@ -312,6 +308,7 @@
                 & .img--cube--down__top{
                     transform: translateY(0px) rotateX(0deg);
                 }
+                
         
             }
             &__front{
@@ -322,9 +319,8 @@
             }
             &__top{
                 transform-origin: bottom;
-                & img{
-                    filter: brightness(50%);
-                }
+                
+                @include insta-bg;
                 transform: translateY(-100%) rotateX(90deg);
                 &:hover .img--overlay__buttons>.img--overlay__btn>.btn{
                     left:100%;
@@ -361,7 +357,7 @@
         }
     }
     &--color-bg{
-        background-color: $color-1;
+        background-color: $shade-3;
         transition-duration: $trans-dur;
         display: flex;
         flex-flow: column;
@@ -378,7 +374,7 @@
             }
             &:before{
                 content:"";
-                border: 1rem solid white;
+                border: 1rem solid $shade-3;
                 border-radius: 100%;
                 position: absolute;
                 width:100%;
