@@ -1,15 +1,14 @@
 .talkbubble {
     visibility: hidden;
     &--side{
-        
         padding: $img-label-font /2;
         background-color: $color-1;
         display: inline-block;
         font-size:$img-label-font*1.2;
-        width:150%;
+        min-width:150%;
         left:110%;
         top: -30%;
-        position: relative;
+        position: absolute;
         text-align: center;
         &:before {
             content: "";

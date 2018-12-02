@@ -63,7 +63,7 @@
             height:100%;
             
             &__btn{
-                position: absolute;
+                position: relative;
                 left:0%;
                 transition-duration: $trans-dur;
                 &:hover +.talkbubble{
@@ -72,6 +72,7 @@
                 }
             }
             &__btn-group{
+                position: relative;
                 $trans-delay:0.1s;
                 &:nth-child(2)>.img-buttons--side__btn{
                     transition-delay: $trans-delay;

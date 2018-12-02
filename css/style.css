@@ -404,7 +404,6 @@ h4 {
       visibility: visible; }
 
 .section {
-  border: 1px solid green;
   overflow: hidden; }
   .section--tiny {
     height: 50rem; }
@@ -749,10 +748,10 @@ h4 {
     background-color: white;
     display: inline-block;
     font-size: 1.56rem;
-    width: 150%;
+    min-width: 150%;
     left: 110%;
     top: -30%;
-    position: relative;
+    position: absolute;
     text-align: center; }
     .talkbubble--side:before {
       content: "";
@@ -974,7 +973,7 @@ h4 {
 .slider--grow-shrink {
   position: absolute;
   transition-duration: 0.5s;
-  left: 5.3%;
+  left: 5%;
   width: 100%;
   background-color: white;
   height: inherit;
@@ -1087,17 +1086,19 @@ h4 {
       width: 30%;
       height: 100%; }
       .img-buttons--side__btn {
-        position: absolute;
+        position: relative;
         left: 0%;
         transition-duration: 0.5s; }
         .img-buttons--side__btn:hover + .talkbubble {
           visibility: visible; }
-      .img-buttons--side__btn-group:nth-child(2) > .img-buttons--side__btn {
-        transition-delay: 0.1s; }
-      .img-buttons--side__btn-group:nth-child(3) > .img-buttons--side__btn {
-        transition-delay: 0.2s; }
-      .img-buttons--side__btn-group:nth-child(4) > .img-buttons--side__btn {
-        transition-delay: 0.3s; }
+      .img-buttons--side__btn-group {
+        position: relative; }
+        .img-buttons--side__btn-group:nth-child(2) > .img-buttons--side__btn {
+          transition-delay: 0.1s; }
+        .img-buttons--side__btn-group:nth-child(3) > .img-buttons--side__btn {
+          transition-delay: 0.2s; }
+        .img-buttons--side__btn-group:nth-child(4) > .img-buttons--side__btn {
+          transition-delay: 0.3s; }
     .img-buttons--bottom {
       display: flex;
       width: 100%;
@@ -1225,7 +1226,8 @@ h4 {
         background-position: center,center;
         width: 100%;
         height: 100%;
-        left: 0px; }
+        left: 0px;
+        top: 0%; }
       .img--cube--up__bottom:hover .img--overlay__buttons > .img--overlay__btn > .btn {
         left: 100%; }
     .img--cube--right__front {
@@ -1244,7 +1246,8 @@ h4 {
         background-position: center,center;
         width: 100%;
         height: 100%;
-        left: 0px; }
+        left: 0px;
+        top: 0%; }
     .img--cube--right:hover .img--cube--right__front {
       transform: translateX(100%) rotateY(90deg);
       filter: brightness(50%); }
@@ -1266,7 +1269,8 @@ h4 {
         background-position: center,center;
         width: 100%;
         height: 100%;
-        left: 0px; }
+        left: 0px;
+        top: 0%; }
     .img--cube--left:hover .img--cube--left__front {
       transform: translateX(-100%) rotateY(-90deg);
       filter: brightness(50%); }
@@ -1293,7 +1297,8 @@ h4 {
         background-position: center,center;
         width: 100%;
         height: 100%;
-        left: 0px; }
+        left: 0px;
+        top: 0%; }
       .img--cube--down__top:hover .img--overlay__buttons > .img--overlay__btn > .btn {
         left: 100%; }
   .img--gradient__image {
